@@ -20,6 +20,12 @@ var toMarkdown = function(string) {
       }
     },
     {
+      patterns: 'body',
+      replacement: function(str, attrs, innerHTML) {
+        return innerHTML ?  innerHTML : '';
+      }
+    },
+    {
       patterns: 'br',
       type: 'void',
       replacement: '\n'
