@@ -16,7 +16,7 @@ var toMarkdown = function(string) {
     {
       patterns: 'p',
       replacement: function(str, attrs, innerHTML) {
-        return innerHTML ? '\n\n' + innerHTML + '\n' : '';
+        return innerHTML ? '\n' + innerHTML + '\n' : '';
       }
     },
     {
