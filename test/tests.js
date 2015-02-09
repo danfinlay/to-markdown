@@ -3,6 +3,11 @@ test("converting p elements", function() {
   equal(toMarkdown("<p class='intro'>Lorem ipsum</p>"), "Lorem ipsum", "We expect p tags to be wrapped with two line breaks");
 });
 
+test("converting div elements", function() {
+  equal(toMarkdown("<div>Lorem ipsum</div>"), "Lorem ipsum", "We expect div tags to be wrapped with two line breaks");
+  equal(toMarkdown("<div class='intro'>Lorem ipsum</div>"), "Lorem ipsum", "We expect div tags to be wrapped with two line breaks");
+});
+
 test("converting emphasis elements", function() {
   equal(toMarkdown("<b>Hello world</b>"), "**Hello world**", "We expect <b>Hello world</b> to be converted to **Hello world**");
   equal(toMarkdown("<strong>Hello world</strong>"), "**Hello world**", "We expect <strong>Hello world</strong> to be converted to **Hello world**");
